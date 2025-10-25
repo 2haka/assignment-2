@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Assignment 2</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Khalid Aljohani</h1>
+    <p><span id="greeting">Welcome</span></p>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌗</button>
+  </header>
+
+  <nav>
+    <button data-target="about" aria-label="Go to About section">About</button>
+    <button data-target="projects" aria-label="Go to Projects section">Projects</button>
+    <button data-target="skills" aria-label="Go to Skills section">Skills</button>
+    <button data-target="contact" aria-label="Go to Contact section">Contact</button>
+    <button data-target="quote" aria-label="Go to Quote section">Quote</button>
+  </nav>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="fade-section">
+      <h2>About Me</h2>
+      <p>Hello! I’m Khalid, a senior Software Engineering student at KFUPM.  I’m passionate about front‑end development, UI design and space technology.  Currently I lead the control & navigation software for a CubeSat project.</p>
+      <img src="assets/images/profile.jpg" alt="Portrait of Khalid" class="profile-image">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-section">
+      <h2>Projects</h2>
+      <div class="project-controls">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="space">Space</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+        <input type="text" id="project-search" placeholder="Search projects…" aria-label="Search projects" />
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="space">
+          <h3>CubeSat Navigation System</h3>
+          <p>Developing control & navigation software for a 2U CubeSat with the AstroArabia team.</p>
+          <img src="assets/images/cubesat.jpg" alt="CubeSat project preview">
+        </article>
+        <article class="project-card" data-category="web">
+          <h3>Consortia Management System (ICMS)</h3>
+          <p>A web‑based system for managing academic and research consortia, built during the SWE 216 course.</p>
+          <img src="assets/images/icms.jpg" alt="ICMS project preview">
+        </article>
+        <article class="project-card" data-category="web">
+          <h3>Personal Portfolio Website</h3>
+          <p>This portfolio site demonstrates responsive design, theme switching and interactive elements.</p>
+          <img src="assets/images/portfolio.jpg" alt="Portfolio project preview">
+        </article>
+      </div>
+      <p id="projects-empty" class="empty-message" hidden>No projects found.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-section">
+      <h2>Skills</h2>
+      <button id="toggle-skills" aria-expanded="false" aria-controls="skills-list">Show Skills</button>
+      <ul id="skills-list" class="skills-list collapsed">
+        <li>HTML5 &amp; CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Python</li>
+        <li>Git &amp; GitHub</li>
+        <li>Tailwind CSS</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-section">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error-message" aria-live="polite"></span>
+
+        <button type="submit">Send</button>
+      </form>
+      <div id="contact-success" class="hidden">
+        <p>Thank you!  Your message has been sent.</p>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="fade-section">
+      <h2>Random Quote</h2>
+      <button id="get-quote">Get a Quote</button>
+      <div id="quote-display">
+        <p class="quote-text"></p>
+        <p class="quote-author"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khalid Aljohani. All rights reserved.</p>
+  </footer>
+</body>
+</html>
