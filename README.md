@@ -13,12 +13,7 @@ This repository contains the second assignment for the Web Development course a
 - **Smooth animations** – CSS transitions and JavaScript are used to fade in sections on scroll, animate button hovers and slide elements in/out for a polished user experience.
 - **Accessible & semantic HTML** – Landmarks like `<header>`, `<nav>`, `<main>` and `<footer>` are used, and all interactive controls include `aria` attributes.  Colour contrast meets WCAG 2.2 guidelines.【30429725074629†L0-L4】
 
-## Running Locally
 
-1. Clone this repository or download the source code.
-2. Open `index.html` in your favourite browser.  No build step is required – everything is plain HTML, CSS and JavaScript.
-3. To see the dark/light theme respect your system preference, ensure that your operating system has a preferred colour scheme set.
-4. If you wish to deploy the site, you can host the contents of the `assignment-2` directory on GitHub Pages, Netlify or any static file server.
 
 ## AI Usage Summary
 
